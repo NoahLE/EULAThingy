@@ -57,4 +57,7 @@ def get_prediction(category, content):
         number_of_entries += 1
         total_score += result['sentence_rating']
 
-    return total_score / number_of_entries
+    if number_of_entries:
+        return total_score / number_of_entries
+    else:
+        return 0
