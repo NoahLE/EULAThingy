@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load i18n %}
+
+{% trans "Pyshtein Calculator" as pagetitle %}
+{% trans "Pyshtein (Levenshtein) Calculator" as pageheader %}
+{% trans "Use the forms below to calculate the Levenshtein difference." as pageintro %}
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap-theme.min.css' %}"/>
+{#    <link rel="stylesheet" href="{% static 'bootstrap.min.js' %}"/>#}
+    {% comment %} Translators: The title {% endcomment %}
+    <title>{{ pagetitle }}</title>
+</head>
+<body>
+    <div class="container">
+      <div class="starter-template">
+        {% comment %} Translators: h1 section {% endcomment %}
+        <h1>{{ pageheader }}</h1>
+        {% comment %} Translators: App description {% endcomment %}
+        <p class="lead">{{ pageintro }}</p>
+            {% block form %}
+            {% endblock %}
+
+            {% block results %}
+            {% endblock %}
+      </div>
+    </div>
+</body>
+</html>

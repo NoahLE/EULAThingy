@@ -1,0 +1,37 @@
+{% extends 'thingys/base.html' %}
+{% load i18n %}
+
+
+
+{% block form %}
+    <form action="/thingys/" method="post" role="form">
+        <div class="form-group">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="Calculate!" class="btn btn-primary button-spacing" />
+        </div>
+    </form>
+{% endblock %}
+
+{% block results %}
+    {% trans "No calculations have been completed." as emptyrow %}
+    <table class="table table-striped">
+        {% if latest_calculations %}
+            {% for calc in latest_calculations %}
+                <tr>
+                    <td>{{ calc.word_one }}</td>
+                    <td>{{ calc.word_two }}</td>
+                    <td>{{ calc.pyshtien_distance }}</td>
+                    <td>{{ calc.pub_date }}</td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+{#                <td>"No calculations have been completed."</td>#}
+                {% comment %} Translators: break when localized... {% endcomment %}
+                <td>{{ emptyrow }}</td>
+            </tr>
+        {% endif %}
+    </table>
+
+{% endblock %}
