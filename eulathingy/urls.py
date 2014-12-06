@@ -1,3 +1,4 @@
+from django.shortcuts import HttpResponseRedirect
 from django.conf.urls import patterns, include, url
 from django.contrib import admin
 
@@ -8,7 +9,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'eulathingy.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^$', lambda r : HttpResponseRedirect('dashboard/')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^thingys/', include('thingys.urls', namespace="thingys")),
-    # url(r'^dashboard/', include('dashboard.urls', namespace="dashboard")),
+    url(r'^dashboard/', include('dashboard.urls', namespace='dashboard')),
 )
