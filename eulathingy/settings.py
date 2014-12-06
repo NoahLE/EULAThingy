@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'eulathingy.urls'
+ROOT_URLCONF = 'urls'
 
-WSGI_APPLICATION = 'eulathingy.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
@@ -62,7 +62,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'eulathingy',
-        'USER': 'postgres',
         'PORT': 5432,
     }
 }
