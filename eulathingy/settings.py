@@ -79,15 +79,12 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+ES_HOSTS = ['127.0.0.1']
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
-ES_HOSTS = ['127.0.0.1']
-=======
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -98,4 +95,3 @@ STATICFILES_FINDERS = (
 )
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
->>>>>>> html-views
