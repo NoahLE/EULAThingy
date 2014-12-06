@@ -21,6 +21,18 @@ class Thingy(models.Model):
         auto_now_add=True, null=False, blank=False
     )
 
+    category_choices = (
+        (0, 'Other'),
+        (1, 'Health'),
+        (2, 'Technology'),
+        (3, 'Finance'),
+        (4, 'Service')
+    )
+    category = models.IntegerField(
+        choices=category_choices, null=False,
+        blank=False, db_index=True, default=0
+    )
+
 
 class ThingySection(models.Model):
     """
@@ -34,4 +46,4 @@ class ThingySection(models.Model):
     content = models.TextField(
         null=False, blank=False
     )
-    thingy = models.ForeignKey(Thingy)
+    thingy = models.ForeignKey(Thingy, db_index=True)
