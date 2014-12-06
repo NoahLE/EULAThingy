@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'thingys',
     'dashboard',
-    'rankings'
 )
 
 MIDDLEWARE_CLASSES = (
