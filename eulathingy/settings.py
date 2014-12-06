@@ -85,9 +85,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-<<<<<<< HEAD
 ES_HOSTS = ['127.0.0.1']
-=======
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
@@ -98,4 +96,3 @@ STATICFILES_FINDERS = (
 )
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
->>>>>>> html-views
