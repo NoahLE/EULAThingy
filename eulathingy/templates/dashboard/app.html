@@ -1,0 +1,53 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+{% include 'dashboard/base_components/topnav.html' %}
+
+{% block content %}
+    <!-- About Section -->
+    <section id="about" style="margin-top: 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla ut mauris volutpat finibus non nec leo. Pellentesque dignissim feugiat metus, eget tempor turpis. Pellentesque tempus, risus ac vestibulum.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla ut mauris volutpat finibus non nec leo. Pellentesque dignissim feugiat metus, eget tempor turpis. Pellentesque tempus, risus ac vestibulum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example Section -->
+    <section class="success" id="Examples">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Examples</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla ut mauris volutpat finibus non nec leo. Pellentesque dignissim feugiat metus, eget tempor turpis. Pellentesque tempus, risus ac vestibulum.</p>
+                </div>
+                <div class="col-lg-4">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque id nulla ut mauris volutpat finibus non nec leo. Pellentesque dignissim feugiat metus, eget tempor turpis. Pellentesque tempus, risus ac vestibulum.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="#" class="btn btn-lg btn-outline">
+                        <i class="fa fa-child"></i> Check it out!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
+
+{% include 'dashboard/base_components/footer.html' %}
