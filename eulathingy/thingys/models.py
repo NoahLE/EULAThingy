@@ -47,3 +47,18 @@ class ThingySection(models.Model):
         null=False, blank=False
     )
     thingy = models.ForeignKey(Thingy, db_index=True)
+
+
+class ThingySentence(models.Model):
+    """
+
+    """
+    content = models.TextField(
+        null=False, blank=False,
+        verbose_name='Sentence content'
+    )
+    thingy_section = models.ForeignKey(ThingySection, db_index=True)
+    rating = models.IntegerField(
+        null=False, default=0,
+        verbose_name='The rating of this sentence'
+    )
