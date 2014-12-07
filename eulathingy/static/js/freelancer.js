@@ -41,9 +41,9 @@ $('.word-button').click(function () {
         $(this).removeClass('btn-default').addClass('btn-info');
     }
     else if ( $(this).hasClass('btn-info') ) {
-        $(this).removeClass('btn-info').addClass('btn-success');
+        $(this).removeClass('btn-info').addClass('btn-warning');
     }
-    else if ( $(this).hasClass('btn-success') ) {
-        $(this).removeClass('btn-success').addClass('btn-default');
+    else if ( $(this).hasClass('btn-warning') ) {
+        $(this).removeClass('btn-warning').addClass('btn-default');
     }
 });

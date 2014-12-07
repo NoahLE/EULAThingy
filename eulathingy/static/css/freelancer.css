@@ -461,3 +461,8 @@ footer .footer-below {
 .add-space {
     margin: 20px 0;
 }
+
+.app-btn {
+    width: 150px;
+    margin-right: 25px;
+}
