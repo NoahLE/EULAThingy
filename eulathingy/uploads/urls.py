@@ -4,5 +4,6 @@ import views
 
 
 urlpatterns = patterns('',
-                       url(r'^$', views.upload)
+                       url(r'^$', views.upload),
+                       url(r'^nginx/', views.upload_nginx)
 )
