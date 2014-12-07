@@ -50,14 +50,15 @@
                     <div class="add-space text-justify larger-font">
                         {{ primary_string }}
                     </div>
-                        <div class="">
+                        {% csrf_token %}
+                        <form action="/app/" method="post">
                             <select class="form-control" name="" id="" style="width: 250px;">
                                 <option value="0">Useless</option>
                                 <option value="1">Worth reading</option>
                                 <option value="2">Essential</option>
                             </select>
                             <button class="btn btn-outline app-btn" type="button">Submit</button>
-                        </div>
+                        </form>
 
                     <div class="bs-component" style="margin-top: 25px;">
                         <blockquote>
