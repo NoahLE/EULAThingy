@@ -40,23 +40,30 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <div class="bs-component"><blockquote><p class="text-justify">{{ context_string1 }}</p></blockquote></div>
+                    <div class="bs-component">
+                        <blockquote>
+                            <p class="text-justify">{{ context_string1 }}</p>
+                        </blockquote>
+                    </div>
 
-                <div class="add-space text-justify larger-font">
-                    {{ primary_string }}
-{#                    {% include 'dashboard/base_components/word-group.html' %}#}
-                </div>
-                <div class="form-group form-horizontal">
-                    <legend>How useful is this clause?</legend>
-                    <select class="form-control" name="" id="">
-                        <option value="0">Useless</option>
-                        <option value="1">Worth reading</option>
-                        <option value="2">Essential</option>
-                    </select>
-                    <a class="btn btn-lg btn-outline app-btn">Submit</a>
-                </div>
 
-                <div class="bs-component"><blockquote><p class="text-justify">{{ context_string2 }}</p></blockquote></div>
+                    <div class="add-space text-justify larger-font">
+                        {{ primary_string }}
+                    </div>
+                        <div class="">
+                            <select class="form-control" name="" id="" style="width: 250px;">
+                                <option value="0">Useless</option>
+                                <option value="1">Worth reading</option>
+                                <option value="2">Essential</option>
+                            </select>
+                            <button class="btn btn-outline app-btn" type="button">Submit</button>
+                        </div>
+
+                    <div class="bs-component" style="margin-top: 25px;">
+                        <blockquote>
+                            <p class="text-justify">{{ context_string2 }}</p>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
         </div>
