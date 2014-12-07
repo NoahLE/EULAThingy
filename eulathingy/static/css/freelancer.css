@@ -475,3 +475,7 @@ footer .footer-below {
     margin-bottom: 10px;
     margin-right: 5px;
 }
+
+.larger-font {
+    font-size: 24px;
+}

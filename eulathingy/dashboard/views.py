@@ -15,7 +15,7 @@ def app(request):
     context_string2 = 'h. The Licensed Application and related documentation are "Commercial Items", as that term is defined at 48 C.F.R. 2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation", as such terms are used in 48 C.F.R. 12.212 or 48 C.F.R. 227.7202, as applicable.'
 
     context_dict = {}
-    context_dict['button_strings'] = primary_string
+    context_dict['primary_string'] = primary_string
     context_dict['context_string1'] = context_string1
     context_dict['context_string2'] = context_string2
 

@@ -42,15 +42,18 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="bs-component"><blockquote><p class="text-justify">{{ context_string1 }}</p></blockquote></div>
 
-                <div class="add-space">
-                    {% for bstring in button_strings.split %}
-                        <a class="btn btn-default word-button">{{ bstring }}</a>
-                    {% endfor %}
+                <div class="add-space text-justify larger-font">
+                    {{ primary_string }}
 {#                    {% include 'dashboard/base_components/word-group.html' %}#}
                 </div>
-                <div class="string-submit">
+                <div class="form-group form-horizontal">
+                    <legend>How useful is this clause?</legend>
+                    <select class="form-control" name="" id="">
+                        <option value="0">Useless</option>
+                        <option value="1">Worth reading</option>
+                        <option value="2">Essential</option>
+                    </select>
                     <a class="btn btn-lg btn-outline app-btn">Submit</a>
-                    <a class="btn btn-lg btn-outline app-btn">Reset</a>
                 </div>
 
                 <div class="bs-component"><blockquote><p class="text-justify">{{ context_string2 }}</p></blockquote></div>
