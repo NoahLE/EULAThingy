@@ -24,3 +24,7 @@ class ThingyDocs(models.Model):
     doc_rating = models.IntegerField(
         max_length=1, null=False, blank=False, default=0
     )
+
+    doc_company = models.IntegerField(
+        max_length=250, null=False, blank=True
+    )
