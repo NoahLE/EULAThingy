@@ -35,3 +35,15 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$('.word-button').click(function () {
+    if ( $(this).hasClass('btn-default') ) {
+        $(this).removeClass('btn-default').addClass('btn-info');
+    }
+    else if ( $(this).hasClass('btn-info') ) {
+        $(this).removeClass('btn-info').addClass('btn-success');
+    }
+    else if ( $(this).hasClass('btn-success') ) {
+        $(this).removeClass('btn-success').addClass('btn-default');
+    }
+});
