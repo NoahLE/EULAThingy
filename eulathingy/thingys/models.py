@@ -14,9 +14,11 @@ class Thingy(models.Model):
     name = models.CharField(
         max_length=100, null=False, blank=False
     )
+
     summary = models.CharField(
         max_length=200, null=True, blank=False
     )
+
     uploaded_on = models.DateTimeField(
         auto_now_add=True, null=False, blank=False
     )
@@ -52,7 +54,9 @@ class ThingySentence(models.Model):
         null=False, blank=False,
         verbose_name='Sentence content'
     )
+
     thingy_section = models.ForeignKey(ThingySection, db_index=True)
+
     rating = models.IntegerField(
         null=False, default=0,
         verbose_name='The rating of this sentence'
