@@ -450,10 +450,6 @@ footer .footer-below {
     display:block;
 }
 
-.word-buttons {
-
-}
-
 .div-holder-custom {
     height: 50px;
 }
@@ -469,4 +465,13 @@ footer .footer-below {
 
 .upload-fix {
     margin-top: 100px;
+}
+
+.string-submit {
+    margin-bottom: 25px;
+}
+
+.word-button {
+    margin-bottom: 10px;
+    margin-right: 5px;
 }

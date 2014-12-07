@@ -40,15 +40,20 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <div class="bs-component"><blockquote><p class="text-justify">In particular, but without limitation, the Licensed Application may not be exported or re-exported (a) into any U.S. embargoed countries or (b) to anyone on the U.S. Treasury Department's list of Specially Designated Nationals or the U.S. Department of Commerce Denied Person’s List or Entity List.</p></blockquote></div>
+                    <div class="bs-component"><blockquote><p class="text-justify">{{ context_string1 }}</p></blockquote></div>
 
                 <div class="add-space">
-                    {% include 'dashboard/base_components/word-group.html' %}
+                    {% for bstring in button_strings.split %}
+                        <a class="btn btn-default word-button">{{ bstring }}</a>
+                    {% endfor %}
+{#                    {% include 'dashboard/base_components/word-group.html' %}#}
+                </div>
+                <div class="string-submit">
                     <a class="btn btn-lg btn-outline app-btn">Submit</a>
                     <a class="btn btn-lg btn-outline app-btn">Reset</a>
                 </div>
 
-                <div class="bs-component"><blockquote><p class="text-justify">h. The Licensed Application and related documentation are "Commercial Items", as that term is defined at 48 C.F.R. §2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation", as such terms are used in 48 C.F.R. §12.212 or 48 C.F.R. §227.7202, as applicable.</p></blockquote></div>
+                <div class="bs-component"><blockquote><p class="text-justify">{{ context_string2 }}</p></blockquote></div>
                 </div>
             </div>
         </div>
