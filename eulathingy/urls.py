@@ -3,7 +3,7 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf import settings
 
-from eulathingy.uploads.views import upload_nginx
+from uploads.views import upload_nginx
 
 
 admin.autodiscover()
