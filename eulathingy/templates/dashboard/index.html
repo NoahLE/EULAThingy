@@ -1,4 +1,63 @@
 {% extends 'dashboard/base.html' %}
+{% load static %}
 {% load i18n %}
 
+{% block content %}
 
+    {% include 'dashboard/base_components/mr_man.html' %}
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>About</h2>
+                    <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-2">
+                    <div class="text-center">
+                        <h2>Liam</h2>
+                        <h4>"lolletsoc"</h4>
+                        <h2>Costello</h2>
+                    </div>
+                    <img src="{% static 'img/liam.png' %}" class="img-centered bio-pics">
+                    <p class="text-justify">A wizard class Python engineer. Hailing from the philosopher swamped Acopolis of Athens, Greece, Liam is known for occasionally brewing up lean robots which have a better understanding of grammar than the average Call of Duty player.</p>
+                </div>
+                <div class="col-lg-4">
+                    <div class="text-center">
+                        <h2>Noah</h2>
+                        <h4>"DigitalMockingbird"</h4>
+                        <h2>Edelman</h2>
+                    </div>
+                    <img src="{% static 'img/noah.jpg' %}" class="img-circle bio-pics"/>
+                    <p class="text-justify">A user experience seer and energetic Python developer. Hailing from the rich programmer ecosystem of Silicon Valley, California, Noah is always looking at the analytics and tweaking and optimizing programs for maximum impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Example Section -->
+    <section class="success" id="Examples">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>What is EULA Thingy?</h2>
+                    <hr class="star-light">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-2 col-lg-8">
+                    <p class="text-justify">TP;NS was founded in 2014 for the world's first virtual hackthon hosted by Koding.com. Using the vast power of machine learning and intuitive crowd sourcing techniques, we hope to provide the online community with a way to quickly read, summarize, and make decisions about legal documents.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="/dashboard/app/" class="btn btn-lg btn-outline">
+                        <i class="fa fa-child"></i> Check it out!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
