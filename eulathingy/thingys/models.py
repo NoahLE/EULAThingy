@@ -1,4 +1,5 @@
 from django.db import models
+from django import forms
 
 
 class ThingyStrings(models.Model):
@@ -7,7 +8,7 @@ class ThingyStrings(models.Model):
         verbose_name='Document title.'
     )
     string_rating = models.IntegerField(
-        max_length=1, null=True, blank=False
+        max_length=1, null=True, blank=False, default=0
     )
     last_modified = models.DateTimeField(
         auto_now_add=True, null=False, blank=False
@@ -21,5 +22,5 @@ class ThingyDocs(models.Model):
     doc_title = models.ForeignKey(ThingyStrings, db_index=True)
 
     doc_rating = models.IntegerField(
-        max_length=1, null=False, blank=False
+        max_length=1, null=False, blank=False, default=0
     )
