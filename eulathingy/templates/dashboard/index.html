@@ -6,13 +6,35 @@
 
     {% include 'dashboard/base_components/mr_man.html' %}
 
-    <!-- About Section -->
-    <section id="about">
+        <!-- Example Section -->
+    <section id="Examples">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>About</h2>
+                    <h2>WHAT'S GOING ON?!?</h2>
                     <hr class="star-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-offset-1 col-lg-10">
+                    <p class="text-justify">TP;NS was founded in 2014 for the world's first virtual hackthon hosted by Koding.com. EULA Thingy is a Django-based web application which combines the two powerful elements of crowdsourced information and machine learning. We hope this will provide the online community with a way to quickly summarize legal resources.</p>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="/dashboard/app/" class="btn btn-lg btn-outline">
+                        <i class="fa fa-child"></i> Check it out!
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="success">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Who are these brave programmers?</h2>
+                    <hr class="star-light">
                 </div>
             </div>
             <div class="row">
@@ -23,7 +45,7 @@
                         <h2>Costello</h2>
                     </div>
                     <img src="{% static 'img/liam.jpg' %}" class="img-circle bio-pics">
-                    <p class="text-justify">A wizard class Python engineer. Hailing from the philosopher swamped Acopolis of Athens, Greece, Liam is known for occasionally brewing up lean robots which have a better understanding of grammar than the average Call of Duty player.</p>
+                    <p class="text-justify">A wizard class Python engineer. Hailing from the philosopher swamped Acopolis of Athens, Greece. Liam is known for occasionally brewing up lean artificial intelligence agents which have a better understanding of grammar than the average Call of Duty player.</p>
                 </div>
                 <div class="col-lg-4">
                     <div class="text-center">
@@ -38,26 +60,6 @@
         </div>
     </section>
 
-    <!-- Example Section -->
-    <section class="success" id="Examples">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Who are TP;NS and what is EULA Thingy?</h2>
-                    <hr class="star-light">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-offset-1 col-lg-10">
-                    <p class="text-justify">TP;NS was founded in 2014 for the world's first virtual hackthon hosted by Koding.com. Using the vast power of machine learning and intuitive crowd sourcing techniques, we hope to provide the online community with a way to quickly read, summarize, and make decisions about legal documents using our web application, EULA Thingy.</p>
-                </div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="/dashboard/app/" class="btn btn-lg btn-outline">
-                        <i class="fa fa-child"></i> Check it out!
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
 {% endblock %}
