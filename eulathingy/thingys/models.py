@@ -40,13 +40,8 @@ class ThingySection(models.Model):
     which are then serialised into the DB. The parser will remove data that
     isn't required and attempt to keep only that which is useful.
     """
-    section_name = models.CharField(
-        max_length=50, null=True, blank=False
-    )
-    content = models.TextField(
-        null=False, blank=False
-    )
     thingy = models.ForeignKey(Thingy, db_index=True)
+    content = models.TextField(null=False, blank=False)
 
 
 class ThingySentence(models.Model):

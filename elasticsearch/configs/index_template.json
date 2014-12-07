@@ -1,0 +1,6 @@
+{
+    "template" : "category_*",
+    "settings" : {
+        "number_of_shards" : 1
+    }1
+}
