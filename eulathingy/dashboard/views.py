@@ -15,3 +15,6 @@ def contact(request):
 
 def app(request):
     return render(request, 'dashboard/app.html')
+
+def upload(request):
+    return render(request, 'dashboard/upload.html')
