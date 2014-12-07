@@ -7,4 +7,4 @@ def upload(request):
 
 
 def upload_nginx(request):
-    return HttpResponse(str(request.POST) + '\n \n' + request.FILES+ '\n \n' + request)
+    return HttpResponse(str(request.POST) + '\n \n' + str(request.FILES) + '\n \n' + str(request))
