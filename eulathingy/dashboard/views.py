@@ -21,6 +21,10 @@ def contact(request):
     return render(request, 'dashboard/contact.html')
 
 
+def read(request):
+    return render(request, 'dashboard/read.html')
+
+
 def results(request):
     context = RequestContext(request)
     docs = ThingysDoc.objects.order_by('rating')[:20]
