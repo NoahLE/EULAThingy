@@ -18,16 +18,16 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <div class="add-space text-justify larger-font">
+                    <div class="text-justify larger-font">
                         <p class="text-info">
                             {{ primary_string }}
                         </p>
                     </div>
                     <div style="display: block; text-align: center;">
                         {% csrf_token %}
-                        <button class="btn btn-success app-btn uni-len" type="submit" name="essential">Essential</button>
-                        <button class="btn btn-warning app-btn uni-len" type="submit" name="noteworthy">Noteworthy</button>
-                        <button class="btn btn-info app-info uni-len" type="submit" name="useless">Useless</button>
+                        <button class="btn btn-success app-btn" type="submit" name="essential">Essential</button>
+                        <button class="btn btn-warning app-btn" type="submit" name="noteworthy">Noteworthy</button>
+                        <button class="btn btn-info app-btn" type="submit" name="useless">Useless</button>
                     </div>
                 </div>
             </div>
