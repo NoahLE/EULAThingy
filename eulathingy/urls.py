@@ -10,6 +10,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'eulathingy.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
+    url(r'^$', include('dashboard.urls', namespace='dashboard')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^dashboard/', include('dashboard.urls',
                                 namespace='dashboard')),
