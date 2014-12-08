@@ -7,18 +7,18 @@
 
 
     <!-- Example Section -->
-    <section id="Examples" class="success" style="margin-top: 100px;">
+    <section id="Examples" style="margin-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center text-lowercase">
                     <h2>{{ title }}</h2>
                     <h4>{{ category }}</h4>
-                    <hr class="star-light">
+                    <hr class="star-primary">
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <div class="add-space text-justify larger-font"><p>
+                    <div class="add-space text-justify larger-font"><p class="text-info">
                         {{ primary_string }}
                     </p></div>
                         {% csrf_token %}
