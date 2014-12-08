@@ -96,4 +96,4 @@ STATICFILES_FINDERS = (
 
 TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 
-FILE_LOCATION = '/var/www/digitalmockingbird.koding.io/uploads'
+FILE_LOCATION = '/tmp'

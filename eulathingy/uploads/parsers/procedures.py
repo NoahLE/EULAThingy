@@ -1,10 +1,8 @@
 from django.db.models.loading import get_model
 from nltk.corpus.reader.plaintext import PlaintextCorpusReader
 
-from eulathingy.thingys.models import ThingyString
 
-
-ThingySection = get_model('thingys', 'ThingySection')
+ThingyString = get_model('thingys', 'ThingyString')
 
 
 def generate_strings(file_path, file_name, thingy):

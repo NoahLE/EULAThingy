@@ -1,19 +1,33 @@
+from uuid import uuid4
+
+from django.db.models.loading import get_model
 from django.http.response import HttpResponse
 from django.shortcuts import render
-from uuid import uuid4
 from django.conf import settings
+
+from parsers import procedures
+
+
+ThingyDoc = get_model('thingys', 'ThingyDoc')
 
 
 def upload(request):
-        return render(request, 'uploads/upload.html')
+    return render(request, 'uploads/upload.html')
 
 
 def upload_nginx(request):
     uploaded_file = request.FILES['upload_file']
     filename, path = _handle_file(uploaded_file)
-    
+    doc = ThingyDoc(
+        title='lol',
+    )
+    import ipdb;
+
+    ipdb.set_trace()
+    strings = list(procedures.generate_strings(path, filename, doc))
 
     return HttpResponse(str(request.FILES))
+
 
 def _handle_file(f):
     identifier = str(uuid4())
