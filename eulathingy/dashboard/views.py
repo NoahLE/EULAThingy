@@ -22,9 +22,9 @@ def app(request):
     context = RequestContext(request)
 
     # find least voted on document
-    sad_doc = ThingysString.objects.order_by('string_rating').slice(-1)
+    sad_doc = ThingysString.objects.order_by('string_rating')
     # sort by least voted on strings
-    sad_doc = sad_doc.objects.order_by('rating')[-1]  # foreign key
+    # sad_doc = sad_doc.objects.order_by('rating')  # foreign key
     # pick bottom string and two surrounding strings
 
     # send as output
