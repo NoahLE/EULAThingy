@@ -65,16 +65,16 @@ def app(request):
 
         selected = request.POST.items()[0][0]
         if selected == 'critical':
-            incr = 2
+            rating = 2
         elif selected == 'noteworthy':
-            incr = 1
+            rating = 1
         else:
-            incr = 0
+            rating = 0
 
         thingyid = int(request.path.split('/')[-1:][0])
         thingy_string = ThingysString.objects.get(pk=thingyid)
 
-        thingy_string.rating += incr
+        thingy_string.rating = rating
         thingy_string.save()
 
         thingy_doc = thingy_string.doc

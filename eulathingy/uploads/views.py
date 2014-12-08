@@ -2,7 +2,6 @@ from uuid import uuid4
 from django.db import transaction
 
 from django.db.models.loading import get_model
-from django.http.response import HttpResponse
 from django.shortcuts import render, redirect
 from django.conf import settings
 
