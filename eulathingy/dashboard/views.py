@@ -26,10 +26,11 @@ def app(request):
 
     # find least voted on document
     qs = ThingysString.objects.order_by('-rating')[:1]
-
     if qs:
         single_string = qs[0]
         context_dict = {
+            'title': single_string.doc.title,
+            'category': single_string.doc.get_category_display(),
             'primary_string': single_string.string,
             'string_id': single_string.id
         }

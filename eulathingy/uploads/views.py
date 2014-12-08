@@ -8,6 +8,8 @@ from django.conf import settings
 
 from parsers import procedures
 
+import os
+
 
 ThingyDoc = get_model('thingys', 'ThingyDoc')
 
@@ -16,19 +18,22 @@ def upload(request):
     return render(request, 'uploads/upload.html')
 
 
+@transaction.atomic
 def upload_nginx(request):
     uploaded_file = request.FILES['upload_file']
     filename, path = _handle_file(uploaded_file)
-    doc = ThingyDoc(
-        title=request.POST.get('title', 'We will never know :-('),
-    )
-    doc.save()
-    with transaction.commit_on_success():
+    try:
+        doc = ThingyDoc(
+            title=request.POST.get('title', 'We will never know :-('),
+        )
+        doc.save()
         strings = procedures.generate_strings(path, filename, doc)
         for string in strings:
             string.save()
+    finally:
+        os.remove(path + '/' + filename)
 
-    return redirect('dashboard/app')
+    return redirect('/dashboard/app')
 
 
 def _handle_file(f):
