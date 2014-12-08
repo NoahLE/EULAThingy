@@ -4,8 +4,6 @@
 {% include 'dashboard/base_components/topnav.html' %}
 
 {% block content %}
-
-
     <!-- Example Section -->
     <section id="Examples" style="margin-top: 100px;">
         <div class="container">
@@ -23,30 +21,34 @@
                             {{ primary_string }}
                         </p>
                     </div>
-                    <div style="display: block; text-align: center;">
-                        <div class="col-lg-4">
-                            {% csrf_token %}
-                            <form action="/dashboard/app/{{ string_id }}" method="post">
-                                <button class="btn btn-success app-btn" type="submit" name="critical">Critical</button>
-                             </form>
-                         </div>
 
-                        <div class="col-lg-4">
+                    <div class="col-lg-4">
                         {% csrf_token %}
                         <form action="/dashboard/app/{{ string_id }}" method="post">
-                            <button class="btn btn-warning app-btn" type="submit" name="noteworthy">Noteworthy</button></form></div>
-                        <div class="col-lg-4">
+                            <button class="btn btn-success app-btn" type="submit" name="critical">Critical</button>
+                         </form>
+                    </div>
 
+                    <div class="col-lg-4">
+                        {% csrf_token %}
+                        <form action="/dashboard/app/{{ string_id }}" method="post">
+                            <button class="btn btn-warning app-btn" type="submit" name="noteworthy">Noteworthy</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-4">
                         {% csrf_token %}
                         <form action="/dashboard/app/{{ string_id }}" method="post">
                             <button class="btn btn-info app-btn" type="submit" name="useless">Useless</button>
                         </form>
-                        </div>
                     </div>
+
                 </div>
             </div>
         </div>
+        </div>
     </section>
+
 {% endblock %}
 
 {% include 'dashboard/base_components/footer.html' %}
