@@ -18,9 +18,9 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <div class="add-space text-justify larger-font">
+                    <div class="add-space text-justify larger-font"><p>
                         {{ primary_string }}
-                    </div>
+                    </p></div>
                         {% csrf_token %}
                         <form action="/app/{{ string_id }}" method="post">
                             <select class="form-control" name="" id="" style="width: 250px;">
