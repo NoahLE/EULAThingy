@@ -2,18 +2,15 @@ from django.db import models
 
 
 class ThingyDoc(models.Model):
-    doc_title = models.CharField(
+    title = models.CharField(
         max_length=250, null=False, blank=False,
         verbose_name='Document title.'
     )
-    doc_rating = models.IntegerField(
+    rating = models.IntegerField(
         max_length=1, null=False, blank=False, default=0
     )
-    doc_votes = models.IntegerField(
+    votes = models.IntegerField(
         null=False, blank=False, default=0
-    )
-    doc_company = models.IntegerField(
-        max_length=250, null=False, blank=True
     )
     category_choices = (
         (0, 'Other'),
@@ -40,9 +37,9 @@ class ThingyString(models.Model):
     string = models.CharField(
         max_length=500, null=False, blank=False
     )
-    string_rating = models.IntegerField(
+    rating = models.IntegerField(
         max_length=1, null=True, blank=False, default=0
     )
-    string_votes = models.IntegerField(
+    votes = models.IntegerField(
         null=False, blank=False, default=0
     )

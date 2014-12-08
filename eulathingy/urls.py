@@ -3,8 +3,6 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.conf import settings
 
-from uploads.views import upload_nginx
-
 
 admin.autodiscover()
 
@@ -14,5 +12,4 @@ urlpatterns = patterns('',
                                                    namespace='dashboard')),
                        url(r'^uploads/', include('uploads.urls',
                                                  namespace='uploads')),
-                       url(r'^nginx_upload/', upload_nginx)
 ) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
