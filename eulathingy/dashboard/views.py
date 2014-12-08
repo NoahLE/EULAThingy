@@ -18,6 +18,9 @@ def index(request):
 def contact(request):
     return render(request, 'dashboard/contact.html')
 
+def results(request):
+    return render(request, 'dashboard/results.html')
+
 def app(request):
     context = RequestContext(request)
 
