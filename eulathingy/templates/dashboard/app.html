@@ -18,19 +18,18 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <div class="add-space text-justify larger-font"><p class="text-info">
-                        {{ primary_string }}
-                    </p></div>
-                        {% csrf_token %}
-                        <form action="/app/{{ string_id }}" method="post">
-                            <select class="form-control" name="" id="" style="width: 250px;">
-                                <option value="0">Useless</option>
-                                <option value="1">Worth reading</option>
-                                <option value="2">Essential</option>
-                            </select>
-                            <button class="btn btn-outline app-btn" type="button">Submit</button>
-                        </form>
+                    <div class="add-space text-justify larger-font">
+                        <p class="text-info">
+                            {{ primary_string }}
+                        </p>
                     </div>
+                    {% csrf_token %}
+                    <form action="/app/{{ string_id }}" method="post">
+                        <button class="btn btn-info app-btn" type="button">Essential</button>
+                        <button class="btn btn-info app-btn" type="button">Noteworthy</button>
+                        <button class="btn btn-info app-btn" type="button">Useless</button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
