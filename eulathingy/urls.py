@@ -7,6 +7,7 @@ from django.conf import settings
 admin.autodiscover()
 
 urlpatterns = patterns('',
+                       url(r'^$', include('dashboard.urls', namespace='dashboard')),
                        url(r'^admin/', include(admin.site.urls)),
                        url(r'^dashboard/', include('dashboard.urls',
                                                    namespace='dashboard')),
