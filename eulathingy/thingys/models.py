@@ -40,3 +40,6 @@ class ThingyString(models.Model):
     string_rating = models.IntegerField(
         max_length=1, null=True, blank=False, default=0
     )
+    rating_votes = models.IntegerField(
+        null=True, blank=False, default=0
+    )
