@@ -33,13 +33,13 @@ class ThingyDoc(models.Model):
 
 class ThingyString(models.Model):
     doc = models.ForeignKey(
-        ThingyDoc, db_index=True
+        ThingyDoc
     )
-    string = models.CharField(
-        max_length=500, null=False, blank=False
+    string = models.TextField(
+        null=False, blank=False
     )
     rating = models.IntegerField(
-        max_length=1, null=True, blank=False, default=0
+        max_length=1, null=True, blank=False, default=0, db_index=True
     )
     votes = models.IntegerField(
         null=False, blank=False, default=0
