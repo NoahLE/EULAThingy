@@ -23,12 +23,12 @@
                             {{ primary_string }}
                         </p>
                     </div>
-                    {% csrf_token %}
-                    <form action="/app/{{ string_id }}" method="post">
-                        <button class="btn btn-info app-btn" type="submit" name="essential">Essential</button>
-                        <button class="btn btn-info app-btn" type="submit" name="noteworthy">Noteworthy</button>
-                        <button class="btn btn-info app-btn" type="submit" name="useless">Useless</button>
-                    </form>
+                    <div style="display: block; text-align: center;">
+                        {% csrf_token %}
+                        <button class="btn btn-success app-btn uni-len" type="submit" name="essential">Essential</button>
+                        <button class="btn btn-warning app-btn uni-len" type="submit" name="noteworthy">Noteworthy</button>
+                        <button class="btn btn-info app-info uni-len" type="submit" name="useless">Useless</button>
+                    </div>
                 </div>
             </div>
         </div>
