@@ -7,7 +7,7 @@ class ThingyDoc(models.Model):
         verbose_name='Document title.'
     )
     rating = models.IntegerField(
-        max_length=1, null=False, blank=False, default=0
+        max_length=1, null=False, blank=False, default=0, db_index=True
     )
     votes = models.IntegerField(
         null=False, blank=False, default=0
