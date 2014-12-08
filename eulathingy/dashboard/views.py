@@ -20,8 +20,14 @@ def index(request):
 def contact(request):
     return render(request, 'dashboard/contact.html')
 
+
 def results(request):
-    return render(request, 'dashboard/results.html')
+    context = RequestContext(request)
+    docs = ThingysDoc.objects.order_by('rating')[:20]
+    context_dict = {'docs': docs}
+
+    return render_to_response('dashboard/results.html', context_dict, context)
+
 
 def app(request):
     context = RequestContext(request)
