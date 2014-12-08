@@ -9,7 +9,7 @@ class ThingyDoc(models.Model):
     doc_rating = models.IntegerField(
         max_length=1, null=False, blank=False, default=0
     )
-    rating_votes = models.IntegerField(
+    doc_votes = models.IntegerField(
         null=False, blank=False, default=0
     )
     doc_company = models.IntegerField(
@@ -43,6 +43,6 @@ class ThingyString(models.Model):
     string_rating = models.IntegerField(
         max_length=1, null=True, blank=False, default=0
     )
-    rating_votes = models.IntegerField(
+    string_votes = models.IntegerField(
         null=False, blank=False, default=0
     )
