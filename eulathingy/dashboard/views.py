@@ -7,6 +7,11 @@ ThingysString = get_model(
     'ThingyString'
 )
 
+ThingysDoc = get_model(
+    'thingys',
+    'ThingyDoc'
+)
+
 def index(request):
     return render(request, 'dashboard/index.html')
 
@@ -16,17 +21,18 @@ def contact(request):
 def app(request):
     context = RequestContext(request)
 
-    string_id = ThingysString.object.order_by('string_rating')[-1]
-    print(string_id)
+    # find least voted on document
+    sad_doc = ThingysString.objects.order_by('string_rating').slice(-1)
+    # sort by least voted on strings
+    sad_doc = sad_doc.objects.order_by('rating')[-1]  # foreign key
+    # pick bottom string and two surrounding strings
+
+    # send as output
+
 
     primary_string = 'You also agree that you will not use these products for any purposes prohibited by United States law, including, without limitation, the development, design, manufacture or production of nuclear, missiles, or chemical or biological weapons.'
-    context_string1 = 'By using the Licensed Application, you represent and warrant that you are not located in any such country or on any such list.'
-    context_string2 = 'h. The Licensed Application and related documentation are "Commercial Items", as that term is defined at 48 C.F.R. 2.101, consisting of "Commercial Computer Software" and "Commercial Computer Software Documentation", as such terms are used in 48 C.F.R. 12.212 or 48 C.F.R. 227.7202, as applicable.'
 
-    context_dict = {'string_id': string_id,
-                    'primary_string': primary_string,
-                    'context_string1': context_string1,
-                    'context_string2': context_string2}
+    context_dict = {'primary_string': primary_string}
 
     return render_to_response('dashboard/app.html', context_dict, context)
 

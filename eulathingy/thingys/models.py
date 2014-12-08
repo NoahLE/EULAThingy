@@ -32,8 +32,9 @@ class ThingyDoc(models.Model):
 
 
 class ThingyString(models.Model):
-    doc = models.ForeignKey(ThingyDoc, db_index=True)
-
+    doc = models.ForeignKey(
+        ThingyDoc, db_index=True
+    )
     string = models.CharField(
         max_length=500, null=False, blank=False
     )
