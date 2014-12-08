@@ -25,9 +25,9 @@
                     </div>
                     <div style="display: block; text-align: center;">
                         {% csrf_token %}
-                        <button class="btn btn-success app-btn" type="submit" name="essential">Essential</button>
-                        <button class="btn btn-warning app-btn" type="submit" name="noteworthy">Noteworthy</button>
-                        <button class="btn btn-info app-btn" type="submit" name="useless">Useless</button>
+                        <a href="http://digitalmockingbird.koding.io/dashboard/app/success+{{ string_id }}"><button class="btn btn-success app-btn" type="submit" name="essential">Essential</button></a>
+                        <a href="http://digitalmockingbird.koding.io/dashboard/app/noteworthy+{{ string_id }}"><button class="btn btn-warning app-btn" type="submit" name="noteworthy">Noteworthy</button></a>
+                        <a href="http://digitalmockingbird.koding.io/dashboard/app/useless+{{ string_id }}"><button class="btn btn-info app-btn" type="submit" name="useless">Useless</button></a>
                     </div>
                 </div>
             </div>
