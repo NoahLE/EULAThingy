@@ -18,8 +18,8 @@
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <div class="text-justify larger-font">
-                        <p class="text-info">
+                    <div class="text-justify">
+                        <p class="text-info larger-font">
                             {{ primary_string }}
                         </p>
                     </div>
@@ -27,15 +27,16 @@
                         <div class="col-lg-4">
                             {% csrf_token %}
                             <form action="/dashboard/app/{{ string_id }}" method="post">
-                                <button class="btn btn-success app-btn" type="submit" name="noteworthy">Critical</button>
+                                <button class="btn btn-success app-btn" type="submit" name="critical">Critical</button>
+                             </form>
                          </div>
-                        </form>
+
                         <div class="col-lg-4">
                         {% csrf_token %}
                         <form action="/dashboard/app/{{ string_id }}" method="post">
-                            <button class="btn btn-warning app-btn" type="submit" name="useless">Warning</button></div>
+                            <button class="btn btn-warning app-btn" type="submit" name="noteworthy">Noteworthy</button></form></div>
                         <div class="col-lg-4">
-                        </form>
+
                         {% csrf_token %}
                         <form action="/dashboard/app/{{ string_id }}" method="post">
                             <button class="btn btn-info app-btn" type="submit" name="useless">Useless</button>
