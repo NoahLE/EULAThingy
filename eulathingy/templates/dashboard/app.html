@@ -46,12 +46,11 @@
                         </blockquote>
                     </div>
 
-
                     <div class="add-space text-justify larger-font">
                         {{ primary_string }}
                     </div>
                         {% csrf_token %}
-                        <form action="/app/" method="post">
+                        <form action="/app/{{ string_id }}" method="post">
                             <select class="form-control" name="" id="" style="width: 250px;">
                                 <option value="0">Useless</option>
                                 <option value="1">Worth reading</option>
