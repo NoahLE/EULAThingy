@@ -21,9 +21,6 @@ def upload_nginx(request):
     doc = ThingyDoc(
         title='lol',
     )
-    import ipdb;
-
-    ipdb.set_trace()
     strings = list(procedures.generate_strings(path, filename, doc))
 
     return HttpResponse(str(request.FILES))
