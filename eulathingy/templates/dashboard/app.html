@@ -24,18 +24,23 @@
                         </p>
                     </div>
                     <div style="display: block; text-align: center;">
+                        <div class="col-lg-4">
+                            {% csrf_token %}
+                            <form action="/dashboard/app/{{ string_id }}" method="post">
+                                <button class="btn btn-success app-btn" type="submit" name="noteworthy">Critical</button>
+                         </div>
+                        </form>
+                        <div class="col-lg-4">
                         {% csrf_token %}
                         <form action="/dashboard/app/{{ string_id }}" method="post">
-                            <button class="btn btn-success app-btn" type="submit" name="noteworthy">Critical</button>
+                            <button class="btn btn-warning app-btn" type="submit" name="useless">Warning</button></div>
+                        <div class="col-lg-4">
                         </form>
                         {% csrf_token %}
                         <form action="/dashboard/app/{{ string_id }}" method="post">
-                            <button class="btn btn-warning app-btn" type="submit" name="useless">Warning</button>
-                        </form>
-                        {% csrf_token %}
-                        <form action="/dashboard/app/{{ string_id`` }}" method="post">
                             <button class="btn btn-info app-btn" type="submit" name="useless">Useless</button>
                         </form>
+                        </div>
                     </div>
                 </div>
             </div>
