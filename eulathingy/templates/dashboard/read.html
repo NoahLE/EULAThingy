@@ -26,10 +26,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                  {% for doc in docs %}
+                  {% for string in strings %}
                       <tr>
                         <td>{{ forloop.counter }}</td>
-                        <td>{{ doc.title }}</td>
+                        <td><a href="/dashboard/read/{{ doc.id }}">{{ doc.title }}</a></td>
                         <td>{{ doc.get_category_display }}</td>
                         <td>{{ doc.rating }}</td>
                       </tr>

@@ -23,7 +23,16 @@ def contact(request):
 
 
 def read(request):
-    return render(request, 'dashboard/read.html')
+    context = RequestContext(request)
+    docid = int(request.path.split('/')[-1:][0])
+    doc = ThingysDoc.objects.get(pk=docid)
+    strings = ThingysString.objects.filter(doc=doc)
+    context_dict = {
+        'doc': doc,
+        'strings': strings
+    }
+
+    return render_to_response('dashboard/read.html', context_dict, context)
 
 
 def results(request):
