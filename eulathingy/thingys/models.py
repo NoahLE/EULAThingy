@@ -39,8 +39,11 @@ class ThingyString(models.Model):
         null=False, blank=False
     )
     rating = models.IntegerField(
-        max_length=1, null=True, blank=False, default=0, db_index=True
+        max_length=1, null=True, blank=False, default=0
     )
     votes = models.IntegerField(
         null=False, blank=False, default=0
+    )
+    last_updated = models.DateTimeField(
+        auto_now=True, null=False, blank=False, db_index=True
     )

@@ -27,7 +27,7 @@ def read(request):
 
 def results(request):
     context = RequestContext(request)
-    docs = ThingysDoc.objects.order_by('rating')[:20]
+    docs = ThingysDoc.objects.order_by('-rating')[:20]
     context_dict = {'docs': docs}
 
     return render_to_response('dashboard/results.html', context_dict, context)
@@ -37,7 +37,7 @@ def app(request):
     context = RequestContext(request)
 
     # find least voted on document
-    qs = ThingysString.objects.order_by('-rating')[:1]
+    qs = ThingysString.objects.order_by('last_updated')[:1]
     if qs:
         single_string = qs[0]
         context_dict = {
