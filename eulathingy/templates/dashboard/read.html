@@ -5,7 +5,7 @@
 
 {% block content %}
 
-        <!-- Example Section -->
+    <!-- Example Section -->
     <section id="Examples" style="margin-top: 100px;">
         <div class="container">
             <div class="row">
@@ -15,32 +15,29 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-offset-1 col-lg-10">
-                    <table class="table">
-                <thead>
-                  <tr>
-                    <th>#</th>
-                    <th>Title</th>
-                    <th>Category</th>
-                    <th>Rating</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {% for string in strings %}
-                      <tr>
-                        <td>{{ forloop.counter }}</td>
-                        <td><a href="/dashboard/read/{{ doc.id }}">{{ doc.title }}</a></td>
-                        <td>{{ doc.get_category_display }}</td>
-                        <td>{{ doc.rating }}</td>
-                      </tr>
-                  {% endfor %}
-                </tbody>
-              </table>
+                <div class="col-lg-offset-2 col-lg-8">
+                    <h1>{{ doc.title }}</h1>
+                    {% for string in strings %}
+                        {% if string.rating == 0 %}
+                            <p class="text-info">
+                                {{ string.string }}
+                            </p>
+                        {% endif %}
+                        {% if string.rating == 1 %}
+                            <p class="text-warning">
+                                {{ string.string }}
+                            </p>
+                        {% endif %}
+                        {% if string.rating == 2 %}
+                            <p class="text-success">
+                                {{ string.string }}
+                            </p>
+                        {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>
     </section>
-
 
 {% endblock %}
 
