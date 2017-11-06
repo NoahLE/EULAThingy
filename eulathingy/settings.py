@@ -36,8 +36,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_extensions',
     'thingys',
-    'uploads',
+    # 'uploads',
     'dashboard',
 )
 
@@ -62,6 +63,9 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'eulathingy',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': '127.0.0.1',
         'PORT': 5432,
     }
 }

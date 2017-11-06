@@ -1,10 +1,8 @@
 from django.conf.urls import patterns, url
 
-import views
-
+from .views import upload, upload_nginx
 
 urlpatterns = patterns('',
-                       url(r'^$', views.upload),
-                       url(r'^submit/', views.upload_nginx)
-
-)
+                       url(r'^$', upload),
+                       url(r'^submit/', upload_nginx)
+                       )

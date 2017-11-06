@@ -1,14 +1,14 @@
 from django.conf.urls import patterns, url
 
-import views
+from .views import index, contact, results, read, app
 
 
 urlpatterns = patterns('',
-                       url(r'^$', views.index, name='index'),
-                       url(r'^index', views.index, name='index'),
-                       url(r'^contact/', views.contact, name='contact'),
-                       url(r'^app/', views.app, name='app'),
-                       url(r'^results/', views.results, name='results'),
-                       url(r'^results/', views.results, name='results'),
-                       url(r'^read/', views.read, name='read')
+                       url(r'^$', index, name='index'),
+                       url(r'^index', index, name='index'),
+                       url(r'^contact/', contact, name='contact'),
+                       url(r'^app/', app, name='app'),
+                       url(r'^results/', results, name='results'),
+                       url(r'^results/', results, name='results'),
+                       url(r'^read/', read, name='read')
 )

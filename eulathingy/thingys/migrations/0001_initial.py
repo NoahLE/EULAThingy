@@ -11,27 +11,26 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='Thingy',
+            name='ThingyDoc',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('name', models.CharField(max_length=100)),
-                ('summary', models.CharField(max_length=200, null=True)),
-                ('uploaded_on', models.DateTimeField(auto_now_add=True)),
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('title', models.CharField(verbose_name='Document title.', max_length=250)),
+                ('rating', models.IntegerField(max_length=1, db_index=True, default=0)),
+                ('votes', models.IntegerField(default=0)),
+                ('category', models.IntegerField(db_index=True, default=0, choices=[(0, 'Other'), (1, 'Health'), (2, 'Technology'), (3, 'Finance'), (4, 'Service')])),
+                ('last_modified', models.DateTimeField(auto_now_add=True)),
+                ('uploaded', models.DateTimeField(auto_now_add=True)),
             ],
-            options={
-            },
-            bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='ThingySection',
+            name='ThingyString',
             fields=[
-                ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('section_name', models.CharField(max_length=50, null=True)),
-                ('content', models.TextField()),
-                ('thingy', models.ForeignKey(to='thingys.Thingy')),
+                ('id', models.AutoField(verbose_name='ID', primary_key=True, serialize=False, auto_created=True)),
+                ('string', models.TextField()),
+                ('rating', models.IntegerField(max_length=1, null=True, default=0)),
+                ('votes', models.IntegerField(default=0)),
+                ('last_updated', models.DateTimeField(db_index=True, auto_now=True)),
+                ('doc', models.ForeignKey(to='thingys.ThingyDoc')),
             ],
-            options={
-            },
-            bases=(models.Model,),
         ),
     ]
